@@ -2,20 +2,12 @@
 import sys
 
 def factorial(n):
-    """
-    Function description:
-    Computes the factorial of a non-negative integer using recursion.
+    result = 1
+    while n > 1:
+        result *= n
+        n -= 1
+    return result
 
-    Parameters:
-    n (int) – The number whose factorial is to be calculated.
-
-    Returns:
-    int – The factorial of the given number.
-    """
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)
-
-f = factorial(int(sys.argv[1]))
-print(f)
+if __name__ == "__main__":
+    f = factorial(int(sys.argv[1]))
+    print(f)
